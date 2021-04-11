@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #34D399;
+}
+body{
+    font-family: "Crimson Text"
+}
+
+/* container */
+.container{
+    padding: 1 rem , 1 rem;
+}
+hr{
+    
+}
+.container-fluid{
+    max-width: 600px;
+    min-width: 300px;
+}
+.container-center{
+    max-width: 600px;
+    margin: auto;
+}
+
+/* links */
+.link{
+    text-decoration:none;
+    padding:0.5rem 
+     1 rem;
+}
+.link-primary{
+   background-color: var(--primary-color);
+   padding: 0.5rem  1rem;
+  border-radius: 1rem ;
+  color:whitesmoke;
+}
+
+.link-secondary{
+    color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid  var(--primary-color);
+
+/* READ BEM NAMING CONVENTION */
+}
