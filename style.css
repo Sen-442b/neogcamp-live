@@ -4,7 +4,7 @@
     --primary-color: #34D399;
 }
 body{
-    font-family: "Crimson Text"
+    font-family:crimson text, 'Times New Roman', Times, serif;
 }
 
 /* container */
@@ -54,4 +54,27 @@ hr{
 display: inline;
 padding: 0rem .5rem;
 
+}
+
+.navigation{
+    background-color:var(--primary-color);
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.navigation .nav-brand{
+font-weight: bold;
+font-size: 2rem;
+}
+.navigation .nav-pills{
+    text-align:right;
+}
+
+.navigation .link{
+
+    color:whitesmoke;
+  
+}
+.navigation .link-active{
+    font-weight: bold;
 }
