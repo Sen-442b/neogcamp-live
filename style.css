@@ -3,9 +3,11 @@
 :root{
     --primary-color: #34D399;
     --dark-color: #4B5563;
+    --light-gray:#D1D5DB;
 }
 body{
     font-family:crimson text, 'Times New Roman', Times, serif;
+    margin:0px;
 }
 
 /* container */
@@ -97,3 +99,43 @@ font-size: 2rem;
     color:var(--dark-color);
   text-align: center;
 }
+
+
+/** section **/
+section{
+padding: 2rem;
+
+
+}
+
+.section h1 {
+    text-align: center;
+  
+}
+
+
+.gs{
+   background-color: var(--light-gray);
+
+
+}
+
+.footer{
+background-color: var(--primary-color);
+padding: 2rem 1rem;
+color: whitesmoke;
+text-align: center;
+border-bottom-left-radius: 1rem;
+border-top-right-radius: 1rem;
+}
+
+.footer .link{
+    color: whitesmoke;
+}
+ .link :hover{
+     color: yellow;
+ }
+
+ .footer .ul{
+     padding-inline-start: 0px;
+ }
