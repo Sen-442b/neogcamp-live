@@ -37,6 +37,9 @@ hr{
    padding: 0.5rem  1rem;
   border-radius: 1rem ;
   color:whitesmoke;
+ display: flex;
+ justify-content: center;
+
 }
 
 .link-secondary{
@@ -64,6 +67,7 @@ padding: 0rem .5rem;
     padding: 1rem;
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 1rem;
+      
 }
 .navigation .nav-brand{
 font-weight: bold;
@@ -71,6 +75,7 @@ font-size: 2rem;
 }
 .navigation .nav-pills{
     text-align:right;
+    padding-inline-start: 0px;
 }
 
 .navigation .link{
@@ -129,6 +134,12 @@ border-bottom-left-radius: 1rem;
 border-top-right-radius: 1rem;
 }
 
+.footer .footer-header{
+font-weight: bold;
+font-size: large;
+text-shadow: yellow
+}
+
 .footer .link{
     color: whitesmoke;
 }
@@ -136,6 +147,8 @@ border-top-right-radius: 1rem;
      color: yellow;
  }
 
+
  .footer .ul{
      padding-inline-start: 0px;
  }
+

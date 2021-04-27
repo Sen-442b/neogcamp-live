@@ -4,115 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Component Library</title>
-<link rel="stylesheet" href="style.css">
+    <title>Home| Adarshbalak</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1> shubhendu's Component Library</h1>
-    <!-- NOTE:
-        USE SYMANTIC TAGS FIRST THEN DIVs 
-    2.BREAK THE USER DESIGN INTO SMALLER CHUNKS FIRST THEN START MAKING THE WEBSITE
-PATTERNS ARE IMPORTANT-->
-        <p>I am attending neog.camp and I want to make a liabrary which would make all my projects look good and consistent <main></main></p>
-        <hr> <!--  horizontal rule  -->
-        <h2>@typography</h2>
-        <h1>This is the biggest heading</h1>
-        <h2>This is the second biggest heading</h2>
-        <p>Let me show you the normal text. This is free flowing and will wrap at the end like a paragraph  
-        </p>
-        <p>This Paragraph has  a <strong>Bold</strong> text</p>
-        <small>this is relatively smaller text </small>
-
-<hr>
-<h2>@container</h2>
-
-<h3>@fluid container</h3>
-<div class="container-fluid">This is a fluid container and it will go till the end of the page </div>
-<h3>@center container</h3>
-<div calss="container container-center" >This is a fluid container and it will go till the specified width </div>
-
-<hr>
-<h2>@links</h2>
-<a href= "/" class="link-primary  link">Primary Link</a>
-<a href= "/"class="link-secondary link">Secondry Link</a>
-<hr>
-
-<h2>@lists</h2>
-<h3>this is a list without bullets</h3>
-<ul class="list-non-bullet" >
-<li>Item One</li>
-<li>Item Two</li>
-<li>Item Three</li>
-</ul>
-
-<h3>unordered inline list</h3>
-
-<ul class= "list-non-bullet">
-    <li class="list-item-inline">Inline item one</li>
-    <li class="list-item-inline">Inline item two</li>
-    <li class="list-item-inline">Inline item three</li>
-
-</ul>
-<h3>reverse ordered list</h3>
- <ol reversed> <!--reverses the order of list items -->
-    <li>milk</li> 
-    <li>eggs</li>
-    <li>bread</li>
-</ol>
-
-<hr>
-<h2 >@nav</h2>
-<nav class="navigation">
-   <div class="nav-brand">iAmBrand</div> 
-   <ul class="lists-non-bullet nav-pills">
-   <li class="list-item-inline">
-       <a class= "link link-active" href="/">HOME</a>
-   </li>
-   <li class="list-item-inline">
-       <a class ="link" href="/">PROJECTS</a>
-   </li>
-   <li class="list-item-inline">
-       <a class ="link" href="/">ABOUT</a>
-   </li>
-   </ul>
-</nav>
-<h2>@header</h2>
-<header class="hero">
-    <img  class="hero-img"src="images/hero-image.svg" alt="Header Image">
-    <h1 class="hero-heading"> Adarsh balak the <span style="color:var(--primary-color);">Web Developer</span></h1>
-</header>
-<hr>
-<h2 >@section</h2>
-<section  class="section" > 
- <div class="container container-center">
-    <h1>white section</h1>
-    <p>This will have a white background</p>
-</div>
+    <nav class="navigation">
+        <div class="nav-brand">iAmDevloper</div> 
+        <ul class="lists-non-bullet nav-pills">
+        <li class="list-item-inline">
+            <a class= "link link-active" href="/">Home</a>
+        </li>
+        <li class="list-item-inline">
+            <a class ="link" href="projects.html">Projects</a>
+        </li>
+        <li class="list-item-inline">
+            <a class ="link" href="blogs.html">Blogs</a>
+        </li>
+        </ul>
+     </nav>
+     <header class="hero">
+        <img  class="hero-img"src="images/hero-image.svg" alt="Header Image">
+        <h1 class="hero-heading"> Adarsh balak the <span style="color:var(--primary-color);">Web Developer</span></h1>
+    </header>
 
     <section class="section gs">
-   <div class="container container-center">    
-    <h1>gray section</h1>
-    <p>This will have gray section</p>
-</div> 
-</section>
-</section>
+        <div class="container container-center">    
+         <h1>Technologies</h1>
+         <p>I'm familiar with HTML5 , CSS3 , Git , <strong>Javascript</strong>, NodeJS, React JS, VScode and Web Hosting using Netlify</p>
+     </div> 
+     </section>
 
-<hr>
+     
+    <section class="section ">
+        <div class="container container-center">    
+         <h1>Projects</h1>
+         <p> I like to showcase my work and thus, you can see my projects hosted online</p>
+     </div> 
+     <a href= "/" class="link-primary  link">Browse Projects</a>
+     </section>
 
-<h2>@footer</h2>
-<footer class="footer">
-    <!-- NEVER USE HEADING TAGS IN FOOTER -->
-    <div>
-        Some small heading inside footer
-    </div>
-    <ul class="list-non-bullet ul">
-        <li class="list-item-inline"><a class="link" href="/"> socialOne </a></li>
-        <li class="list-item-inline"><a class="link" href="/"> socialTwo</a></li>
-        <li class="list-item-inline"><a class="link" href="/"> socialThree</a></li>
-    </ul>
-</footer>
-<!-- <div style= "height:30vh;"> -->
+     <section class="section gs ">
+        <div class="container container-center">    
+         <h1>Blogs</h1>
+         <p> I'm also writing some remotely tech related blogs to improve my writing skills and documenting what I am learning </p>
+     </div> 
+     <a href= "/" class="link-primary  link">Read My Blogs</a>
+     </section>
+     <br> <br>
+     <footer class="footer">
+        <!-- NEVER USE HEADING TAGS IN FOOTER -->
+        <div class="footer-header">
+            Connect To Me 
+        </div>
+        <ul class="list-non-bullet ul">
+            <li class="list-item-inline"><a class="logo_ld" href="https://www.linkedin.com/in/shubhendu-sen-771830156/" target="_"><img   alt="linkedin" src="https://img.icons8.com/metro/26/000000/linkedin.png"/></a></li>
+            <li class="list-item-inline"><a class="logo_gh" href="https://github.com/Sen-442b" target="_"> <img  alt="Github" src="https://img.icons8.com/windows/32/000000/github.png"/></a></li>
+            <li class="list-item-inline"><a class="logo_twt" href="https://twitter.com/sen_shubhendu" target="_" > <img alt="Twitter" src="https://img.icons8.com/ios-filled/24/000000/twitter.png"/></a></li>
+        </ul>
+    </footer>
 
-<!-- </div> -->
-</body> 
+</body>
 </html>
