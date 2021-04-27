@@ -37,8 +37,8 @@ hr{
    padding: 0.5rem  1rem;
   border-radius: 1rem ;
   color:whitesmoke;
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 
 }
 
@@ -47,6 +47,8 @@ hr{
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     border: 1px solid  var(--primary-color);
+    display: flex;
+    justify-content: center;
 
 /* READ BEM NAMING CONVENTION */
 }
