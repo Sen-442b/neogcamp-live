@@ -145,12 +145,12 @@ text-shadow: yellow
 .footer .link{
     color: whitesmoke;
 }
- .link :hover{
-     color: yellow;
- }
-
+ 
 
  .footer .ul{
      padding-inline-start: 0px;
  }
 
+ a:hover{
+    opacity: .6;
+}
