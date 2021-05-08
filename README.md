@@ -1,2 +1,2 @@
 # neogcamp-live
-Responsive Web Site using HTML &amp; CSS
+Responsive Personal Website using HTML &amp; CSS
