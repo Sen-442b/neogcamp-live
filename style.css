@@ -24,6 +24,7 @@ hr{
 .container-center{
     max-width: 600px;
     margin: auto;
+   
 }
 
 /* links */
@@ -70,6 +71,7 @@ padding: 0rem .5rem;
     padding: 1rem;
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 1rem;
+ 
       
 }
 .navigation .nav-brand{
@@ -96,8 +98,8 @@ font-size: 2rem;
 
 .hero .hero-img{
     max-width: 350px;
-    display:block ;
-    margin:auto;
+
+  
 
 }
 
@@ -152,6 +154,10 @@ text-shadow: yellow
      padding-inline-start: 0px;
  }
 
+ a{
+    text-decoration: none;
+ }
  a:hover{
     opacity: .6;
+    
 }
