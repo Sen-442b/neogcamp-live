@@ -97,9 +97,8 @@ font-size: 2rem;
 }
 
 .hero .hero-img{
-    max-width: 350px;
-
-  
+   width: 350px;
+    justify-items: center;
 
 }
 
