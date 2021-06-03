@@ -10,8 +10,8 @@ body{
     font-family:crimson text, 'Times New Roman', Times, serif;
    
     /* background-image: url("/images/blog-post.svg"); */
-     max-width: 100%
-    margin: auto;
+     max-width: 100%;
+   margin: 0;
    
 }
 
@@ -19,16 +19,16 @@ body{
 .container{
     padding: 1 rem , 1 rem;
 }
-hr{
 
-}
 .container-fluid{
     max-width: 600px;
     min-width: 300px;
 }
 .container-center{
+    display: block;
     max-width: 600px;
-    margin: auto;
+     margin: auto;
+      
    
 }
 
@@ -40,11 +40,14 @@ hr{
 }
 .link-primary{
    background-color: var(--primary-color);
-   padding: 0.5rem  1rem;
+   padding: .5rem 1rem;
+   max-width: 600px;
   border-radius: 1rem ;
   color:whitesmoke;
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: auto;
+  text-align: center;
+
 
 }
 
@@ -120,15 +123,13 @@ width: 50vw;
 
 /** section **/
 section{
-padding: 2rem;
 
+text-align: left;
+padding-right: 1rem;
 
 }
 
-.section h1 {
-    text-align: center;
-  
-}
+
 
 
 .gs{
