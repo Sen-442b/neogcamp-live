@@ -5,9 +5,14 @@
     --dark-color: #4B5563;
     --light-gray:#D1D5DB;
 }
+
 body{
     font-family:crimson text, 'Times New Roman', Times, serif;
-    margin:0px;
+   
+    /* background-image: url("/images/blog-post.svg"); */
+     max-width: 100%
+    margin: auto;
+   
 }
 
 /* container */
@@ -72,7 +77,7 @@ padding: 0rem .5rem;
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 1rem;
  
-      
+     
 }
 .navigation .nav-brand{
 font-weight: bold;
@@ -97,8 +102,11 @@ font-size: 2rem;
 }
 
 .hero .hero-img{
-   width: 350px;
-    justify-items: center;
+ 
+display: block;
+margin: auto;
+width: 50vw;
+
 
 }
 
@@ -130,6 +138,7 @@ padding: 2rem;
 }
 
 .footer{
+    margin-top: 2rem;
 background-color: var(--primary-color);
 padding: 2rem 1rem;
 color: whitesmoke;
