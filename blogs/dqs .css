@@ -1,0 +1,33 @@
+:root{
+    --primary-color: #34D399;
+    --dark-color: #4B5563;
+    --light-gray:#D1D5DB;
+}
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+.blog-content{
+    max-width: 600px;
+   margin: 0 auto;
+   
+}
+
+.content_img{
+    max-width: 100%;
+   
+    border-radius: 5px;   
+}
+
+.code{
+    background-color: var(--light-gray) ;
+   padding: 2px;
+    margin-left: 1rem;
+}
+
+.codebox{
+    background-color: var(--light-gray); margin: 1rem;
+}

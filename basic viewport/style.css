@@ -17,7 +17,7 @@ body{
 
 /* container */
 .container{
-    padding: 1 rem , 1 rem;
+    padding: 1rem , 1rem;
 }
 
 .container-fluid{
@@ -37,6 +37,7 @@ body{
     text-decoration:none;
     padding:0.5rem 
      1 rem;
+     color: inherit;
 }
 .link-primary{
    background-color: var(--primary-color);
@@ -65,6 +66,8 @@ body{
 /** Lists**/
 .list-non-bullet{
     list-style:none;
+    
+    padding-inline-start:0;
 }
 
 .list-item-inline{
@@ -114,7 +117,7 @@ width: 50vw;
 }
 
 .hero .hero-heading{
-    padding-top: 1rem
+    padding: 1rem
      ;
     color:var(--dark-color);
   text-align: center;
@@ -126,6 +129,7 @@ section{
 
 text-align: left;
 padding-right: 1rem;
+margin: 1rem;
 
 }
 
@@ -133,11 +137,17 @@ padding-right: 1rem;
 
 
 .gs{
-   background-color: var(--light-gray);
+   background-color: rgba(209, 213, 219, 0.4);
+   
+   border-radius: 4px;
+   padding: 1rem;
+   margin: 3px;
 
 
 }
-
+.gs:hover{
+background-color: transparent;
+}
 .footer{
     margin-top: 2rem;
 background-color: var(--primary-color);
@@ -165,8 +175,41 @@ text-shadow: yellow
 
  a{
     text-decoration: none;
+    font-family: inherit;
  }
  a:hover{
     opacity: .6;
     
+}
+/* for blogs */
+
+.content-img{
+    max-width: 50vw;
+    margin: auto;
+}
+
+.hero-bl-heading{
+    margin-block-start:0;
+    margin-block-end:0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    text-align: center;
+}
+
+.wall_img{
+    max-width: 100%;
+   
+   
+    opacity: .7;
+    border-radius: 5px;
+}
+
+.gs_1{
+    background-color: rgba(209, 213, 219, 0.4);
+      
+    display: block;
+   margin:auto;
+ 
+   border-radius: 4px;
+   padding: 1rem;
 }

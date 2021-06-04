@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs| javascript | querySelector()</title>
+    <link rel="stylesheet" href="dqs .css" />
+    <link rel="stylesheet" href="/basic viewport/style.css" />
+  </head>
+  <body class="blog-body">
+    <nav class="navigation">
+      <div class="nav-brand">iAmDeveloper</div>
+      <ul class="lists-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a class="link link-active" href="/basic viewport/index.html">Home</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="/basic viewport/projects.html">Projects</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="/basic viewport/blogs.html">Blogs</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="blog-content">
+      <img
+        class="wall_img"
+        style="margin-top: 1rem"
+        src="/images/Plum Blossom Japan Free Vector.jpg"
+        alt="Header Image"
+      />
+      <h1 style="color: var(--secondary-color)">
+        document.querySelector() Explained
+      </h1>
+      <p><small>|posted on :</small> <em>29/05/2021</em></p>
+    </header>
+    <main>
+      <article>
+        <section class="blog-content">
+          <h2>document.querySelector()</h2>
+          <p>
+            For the sake of analogy let’s suppose that you own a Multinational
+            Company situated in India and you have a branch in Japan , you want
+            to command the manager of that specific branch to make some changes
+            in the office building but unfortunately you don’t know Japanese
+            language so you hire a person who not only knows your language but
+            also he has some knowledge of Japanese too and that person will
+            eventually translate your commands into Japanese and the XYZ manager
+            of the branch would execute the same
+          </p>
+
+          <p>
+            Here JavaScript is your multi-national company, elements of HTML is
+            your branch and <strong>.querySelector() </strong> method is your
+            bilingual employee
+          </p>
+
+          <p>
+            In simple words document.querySelector() selects an element from
+            your HTML <i> document</i> and then it stores it's reference to a
+            variable which ultimately facilitates you to manipulate DOM and add
+            functionalities to it
+          </p>
+          <img
+            class="content_img"
+            src="/images/query-selector-ppt.svg "
+            alt="image explaining how query selector works"
+          />
+          <h3>Syntax</h3>
+
+          <p class="code">
+            <code>var your_var_name = document.querySelector(“selector”);</code>
+          </p>
+          <ul>
+            <h3>Things to note</h3>
+            <li>
+              If there are multiple objects connected with the given selector in
+              the HTML document then the
+              <strong> first element</strong> referencing such selector is
+              returned
+            </li>
+            <li>If there are no matches then null value would be returned</li>
+            <li>
+              If you want to select multiple objects with one selector then you
+              must use <i>document.querySelectorAll()</i> method
+            </li>
+          </ul>
+          <h3>Examples</h3>
+          <p>1. Referencing an element by its <strong>id</strong></p>
+          <!-- TO BE IMPlEMENTED 
+    <code class="code">
+ 
+        &lt html &gt
+            &lt body &gt
+           DOM  
+              &lt h1 id="text-color"&gtText color is BLUE &lt/h1&gt
+              &lt script&gt
+           var textColor = document.querySelector("#text-color");
+          //storing H1 element reference by its id
+               
+           textColor.style.color = "blue";
+            // Manipulating  element by changing its text node's color
+          
+              &lt /script &gt
+            &lt /body &gt
+          &lt /html &gt
+        
+    </code>
+-->
+          <!-- code in browser -->
+          <div class="codebox">
+            <code>
+              &lt html &gt <br />
+              &lt body &gt<br />
+              &lt--DOM--&gt <br />
+              <strong>
+                &lt h1 id="text-color"&gtText color is BLUE &lt/h1&gt </strong
+              ><br />
+              &lt script&gt<br />
+              <strong>
+                var textColor = document.querySelector("#text-color"); </strong
+              ><br />
+              //storing H1 element reference by its id<br />
+
+              textColor.style.color = "blue";<br />
+              // Manipulating element by changing its text node's color<br />
+
+              &lt /script &gt<br />
+              &lt /body &gt<br />
+              &lt /html &gt<br />
+            </code>
+          </div>
+          <ul>
+            <h4>Things to note</h4>
+            <li>
+              To select an element with a specific id, write a
+              <i>hash (#)</i> character, followed by the id of the element
+              inside its quotation marks
+            </li>
+            <li>
+              Storing reference in a JavaScript variable is a good practice
+            </li>
+            <li><small>id</small> must be unique</li>
+          </ul>
+          <p>2.Referencing an element by its <strong>class</strong></p>
+          <p></p>
+          <div class="codebox">
+            <code>
+              &#x3C;html&#x3E;<br />
+              &#x3C;body&#x3E;<br />
+              &#x3C;!-- DOM --&#x3E;<br />
+              <strong>
+                &#x3C;h1 class=&#x22;text-color&#x22;&#x3E;Text color is
+                GREEN&#x3C;/h1&#x3E;<br />
+              </strong>
+              &#x3C;script&#x3E;<br />
+              <strong>
+                var textColor = document.querySelector(&#x22;.text-color&#x22;);
+                //storing H1 element <br />reference by its class</strong
+              ><br />
+              textColor.style.color = &#x22;green&#x22;; // Manipulating element
+              by changing its text<br />
+              node&#x27;s color<br />
+              &#x3C;/script&#x3E;<br />
+              &#x3C;/body&#x3E;<br />
+              &#x3C;/html&#x3E;<br />
+            </code>
+          </div>
+          <ul>
+            <h4>Things to note</h4>
+            <li>
+              To select an element with a class, write a
+              <i>period (.)</i> character followed by the class of the element
+              inside its quotation marks
+            </li>
+            <li>
+              As mentioned above <i>querySelector</i> can refer to a single
+              element only thus, if a class has multiple elements , it will
+              refer to the first element only
+            </li>
+          </ul>
+          <p>3.Referencing an element by its <strong>itself (tag referencing) </strong></p>
+          <div class="codebox">
+              <code>
+                &#x3C;html&#x3E;<br>
+                &#x3C;body&#x3E;<br>
+                  &#x3C;!-- DOM  --&#x3E;<br>
+                  <strong>&#x3C;h1 &#x3E;Text color is RED&#x3C;/h1&#x3E;</strong><br>
+                  &#x3C;script&#x3E;<br>
+                <strong>var heading = document.querySelector(&#x22;h1&#x22;); //storing H1 element reference in a JS variable </strong> <br>
+                    heading.style.color = &#x22;red&#x22;; // Manipulating  element by changing its text <br>node&#x27;s color<br>
+                  &#x3C;/script&#x3E;<br>
+                &#x3C;/body&#x3E;<br>
+              &#x3C;/html&#x3E;<br>
+              
+              </code>
+
+          </div>
+          <ul>
+            <h4>Things to note</h4>
+            <li>
+                To select an element with its own tag, write the tag name of the element in <i>querySelector's</i> parenthesis within quotation marks
+            </li>
+            <li>
+                You don’t have to add any special characters, just plain  element name tag according to the HTML standard  is required
+            </li>
+          </ul>
+          <h3>Conclusion</h3>
+          <p><i>document.querySelector()</i> method is a versatile method to store  references of document(html) elements in JavaScript variables(optional)  unlike other referencing methods it is not limited to a specific type of selector </p>
+          <hr>
+    <p style="font-size:smaller; text-align:right"> &#169;Shubhendu Sen</p>
+        </section>
+      </article>
+    </main>
+    
+    <br>
+    <footer class="footer">
+      <!-- NEVER USE HEADING TAGS IN FOOTER -->
+      <div class="footer-header">Connect To Me</div>
+      <ul class="list-non-bullet ul">
+        <li class="list-item-inline">
+          <a
+            class="logo_ld"
+            href="https://www.linkedin.com/in/shubhendu-sen-771830156/"
+            target="_"
+            ><img
+              alt="linkedin"
+              src="https://img.icons8.com/metro/26/000000/linkedin.png"
+          /></a>
+        </li>
+        <li class="list-item-inline">
+          <a class="logo_gh" href="https://github.com/Sen-442b" target="_">
+            <img
+              alt="Github"
+              src="https://img.icons8.com/windows/32/000000/github.png"
+          /></a>
+        </li>
+        <li class="list-item-inline">
+          <a
+            class="logo_twt"
+            href="https://twitter.com/sen_shubhendu"
+            target="_"
+          >
+            <img
+              alt="Twitter"
+              src="https://img.icons8.com/ios-filled/24/000000/twitter.png"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
