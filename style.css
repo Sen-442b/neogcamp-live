@@ -88,6 +88,7 @@ padding: 0rem .5rem;
 .navigation .nav-brand{
 font-weight: bold;
 font-size: 2rem;
+color: white;
 }
 .navigation .nav-pills{
     text-align:right;
@@ -212,4 +213,8 @@ text-shadow: yellow
  
    border-radius: 4px;
    padding: 1rem;
+}
+
+iframe{
+    max-width: 100%;
 }

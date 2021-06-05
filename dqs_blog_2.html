@@ -1,0 +1,220 @@
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dqs .css" />
+  </head>
+  <body class="blog-body">
+    <nav class="navigation">
+      <div class="nav-brand">iAmDeveloper</div>
+      <ul class="lists-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a class="link link-active" href="index.html">Home</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="projects.html">Projects</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="blogs.html">Blogs</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="blog-content">
+      <img
+        class="wall_img"
+        style="margin-top: 1rem"
+        src="/images/khabby-blog-2.png"
+        alt="Header Image"
+      />
+      <small>
+        <a href="https://youtu.be/2_-NrMZb-ZA" style="text-align: left;">Art by FlipBookX , caption by me</a>
+      </small>
+
+      <h1 style="color: var(--secondary-color)">
+        ES6 Arrow Functions and <i class="codebox">this</i> keyword
+      </h1>
+      <p><small>|posted on :</small> <em>05/06/2021</em></p>
+    </header>
+    <main>
+      <article>
+        <section class="blog-content">
+          <h3>Arrow functions and <i>this</i> keyword</h3>
+          <p>
+            An arrow function is an <bold>alternative</bold> to the regular
+            scoped function expression
+          </p>
+          <p>
+            Before actually going to the depth of arrow functions lets take a
+            quick look on how regular function expressions work
+          </p>
+          <div style="font-size: small; text-align: center; margin: 0">
+            image 2.1
+          </div>
+          <img
+            class="content_img"
+            src="/images/function.png"
+            alt="image explaining how regular functions works"
+          />
+          <p>
+            Functions defined in short could be, a reusable piece of code that
+            is designed to perform a particular task, as shown in
+            <small>image 2.1</small> the function <i>square</i> is taking a
+            numeric parameter and returning its square value thus, performing a
+            task which can be reused whenever called.
+          </p>
+          <p>
+            Let’s take a look on an Arrow function which takes same parameters
+            and arguments mentioned in <small>image 2.1 </small>
+          </p>
+          <h2>Arrow Function Syntax</h2>
+          <div style="font-size: small; text-align: center; margin: 0">
+            image 2.2
+          </div>
+          <img
+            class="content_img"
+            src="/images/function_2.png"
+            alt="image explaining how query selector works"
+          />
+          <p>
+            Here, both regular function <i>(img 2.1 )</i> and es6 function<i
+              >(img 2.2 )</i
+            >
+            are going to return the same output after being called
+          </p>
+          <ol>
+            <h4>Some syntactical differences are mentioned below</h4>
+            <li>
+              If the arrow function is inline then the
+              <strong>“return ”</strong> statement is not required to execute
+              the argument
+            </li>
+            <li>
+              Usage of curly braces(“{}”) , parenthesis(“()”) or return
+              statement becomes optional according to the need of developer
+            </li>
+            <li>An arrow function is usually assigned to a variable</li>
+          </ol>
+          <h3>
+            But what makes arrow functions different from regular functions ?
+          </h3>
+          <p>
+            If you are thinking that precise syntax is the distinctive point
+            here then you are probably wrong
+          </p>
+          <p>
+            Because what actually makes the fundamental difference is the way
+            through which arrow functions handle<i class="codebox">this</i>
+            keyword
+          </p>
+          <p>
+            A regular function expression binds its own <i>“this”</i> keyword
+            which usually refers to the global or window object unless it is
+            invoked as an method in simple words the assignment value of
+            <i>this</i> inside a function depends on how it is invoked like it
+            will refer to its parent object if invoked as a method but there
+            comes an unexpected case scenario when we try to use “this” inside
+            nested function or in an inner function of a method than it refers
+            to the window object instead of pointing to its parent
+          </p>
+          <div class="codebox">
+            <code>
+              const myObj = { <br />
+              name:"Sam",<br />
+              hobbies: ["code", "design", "read book"],<br />
+              message: function (){<br />
+              this.hobbies.forEach(<strong
+                >function innerFunc(hobbies)<br />{<br />
+                console.log( `${this.name} likes to ${hobbies}`)<br />
+
+                }</strong
+              >)<br />
+              }<br />
+
+              }<br />
+              <strong
+                >myObj.message() //output "undefined have hobbies…… *3" </strong
+              ><br />
+            </code>
+          </div>
+          <p>
+            So,referencing to the above-stated code snippet if you try to get the value of <i>this</i> from the inner function of a regular
+            function/method then you will get <strong>“window object”</strong> as result(
+            “global” in node.js) instead of getting the expected parent
+            object(myObj in the given snippet) meaning <i> this </i> keyword
+            treats inner/ nested functions inside a method as regular functions
+            only
+          </p>
+          <p>
+              
+   And to sort out  the  confusing referencing  issue of  ‘’this’’,  Arrow Functions  was introduced  in ES6
+  we are going to take same example , same naming conventions  we will only change out  our innerFunc() function from regular to arrow function and  will get the desired output  i.e. the reference to our parent object  (myObj) 
+  
+          </p>
+          <div class="codebox">
+            <code>
+                const myObj = {<br>
+                    name:"Sam",<br>
+                    hobbies: ["code", "design", "read book"],<br>
+                    message: function (){<br>
+                      this.hobbies.forEach( <strong>innerFunc = (hobbies) => {<br>
+                        console.log (`${this.name} likes to ${hobbies}`)<br>
+                      }</strong><br>
+                       )<br>
+                  
+                    }<br>
+                    
+                  }<br>
+                  <strong>myObj.message() // output : sam likes to code.....design etc </strong><br>
+                  
+               
+            </code>
+          </div>
+          <h3>Conclusion</h3>
+          <p>
+            It wouldn't  be wrong to say that arrow functions were mainly introduced to eliminate the chaos created by <i>this</i>  keyword though  JS already had various solutions like  storing value of  <i>this</i>  inside a variable outside the inner  function or using <i>.bind()</i> but arrow function  mainly reduces the amount of code and user readability that’s why it is always preferable to use arrow functions especially when using methods like  .map()  , .forEach()  etc .
+          </p>
+          <hr>
+          <p style="font-size:smaller; text-align:right"> &#169;Shubhendu Sen</p>
+        </section>
+      </article>
+    </main>
+    <footer class="footer">
+        <!-- NEVER USE HEADING TAGS IN FOOTER -->
+        <div class="footer-header">Connect To Me</div>
+        <ul class="list-non-bullet ul">
+          <li class="list-item-inline">
+            <a
+              class="logo_ld"
+              href="https://www.linkedin.com/in/shubhendu-sen-771830156/"
+              target="_"
+              ><img
+                alt="linkedin"
+                src="https://img.icons8.com/metro/26/000000/linkedin.png"
+            /></a>
+          </li>
+          <li class="list-item-inline">
+            <a class="logo_gh" href="https://github.com/Sen-442b" target="_">
+              <img
+                alt="Github"
+                src="https://img.icons8.com/windows/32/000000/github.png"
+            /></a>
+          </li>
+          <li class="list-item-inline">
+            <a
+              class="logo_twt"
+              href="https://twitter.com/sen_shubhendu"
+              target="_"
+            >
+              <img
+                alt="Twitter"
+                src="https://img.icons8.com/ios-filled/24/000000/twitter.png"
+            /></a>
+          </li>
+        </ul>
+      </footer>
+  </body>
+</html>
