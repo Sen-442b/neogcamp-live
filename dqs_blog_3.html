@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blogs| javascript | parseInt()</title>
+        <link rel="stylesheet" href="dqs .css" />
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body class="blog-body">
+        <nav class="navigation">
+          <div class="nav-brand">user_friendly_developer</div>
+          <ul class="lists-non-bullet nav-pills">
+            <li class="list-item-inline">
+              <a class="link link-active" href="index.html">Home</a>
+            </li>
+            <li class="list-item-inline">
+              <a class="link" href="projects.html">Projects</a>
+            </li>
+            <li class="list-item-inline">
+              <a class="link" href="blogs.html">Blogs</a>
+            </li>
+            <li class="list-item-inline">
+              <a class ="link" href="lectures.html">Lectures</a>
+          </li>
+            <li class="list-item-inline">
+              <a class ="link" href="about_me.html">About</a>
+          </li>
+          </ul>
+        </nav>
+        <header class="blog-content">
+          <img
+            class="wall_img"
+            style="margin-top: 1rem"
+            src="/images/for_blog_3.png"
+            alt="Header Image"
+          />
+          <small style="text-align:left"> <a href="/about_me.html">Image by Me</a> </small>
+          
+          <h1 style="color: var(--secondary-color)">
+            The Curious Case of parseInt() function 
+          </h1>
+          <p><small>|posted on :</small> <em>15/06/2021</em></p>
+        </header>
+        <main>
+            <article>
+                <section class = "blog-content">
+                    <h2>
+                      parseInt() 
+                      </h2>
+                      <p> the parseInt()  function simply parses a string argument into an integer within its specified radix 
+                          in simple words  it  converts  a string argument into numeric form (integer in this case) with a specified base( binary , octal , decimal ,hex etc.) 
+                          
+                        </p>  
+                        <h3>
+                          Syntax
+                          </h3>
+               
+                <p class="code">
+                  <code>parseInt(string) <br>
+                      //or  <br>
+                      
+                      parseInt(string , radix) <br> 
+                      </code>
+                </p>
+                <ol>
+                <h3>Things to note</h3>
+                <li>
+                  In  the given code snippet  “string” parameter is the value which  is supposed to be parsed into an integer 
+                </li>
+                <li> As  mentioned in the snippet  that  use of base is optional if the user wants  the default state of radix</li>
+              </ol>
+      
+              <h3>Default Value</h3>
+              <p class="code">
+                  <code>var hexInteger =parseInt('0xC') // starts with"0x" hence implicitly declares radix as 16 <br>
+                      console.log(hexInteger) //output : 12 
+                     </code>
+                </p>
+      
+                <p>if you don’t specify a radix than  the ‘parseInt()’ function will implicitly apply  decimal base to it  however if the string starts with digit 0  than <strong>octal</strong> base would be applied by default and if the string starts with <strong>0x</strong>  than <strong>hexadecimal base</strong>(as mentioned in the snippet above)  is  applied to the same   thus it is  a good practice to specify the radix  while calling this function </p>
+      
+      
+      <h3>How It Parses a Specified String</h3>
+      <h4>Example 1</h4>
+                <p class="code">
+                  <code>var  string = parseInt('100 this text will be ignored') // only 100 would be printed and the rest of the non-numeric text is ignored <br>
+                    console.log(string) //output 100 
+                    </code>
+      
+                </p>
+                <h4>Example 2</h4>
+                <p class="code">
+                  <code>var  string   = parseInt('The whole string will be ignored 200') // JS ignores the whole string if the first character of  the string is non-numerical <br>
+                    console.log(string) // output: NaN
+                   
+                    </code>
+      
+                </p>
+                <ul>
+                <li><p>If a specific character doesn’t have a numeric value according to the specified  radix than such character and all the  upcoming numeric or non-numeric  values are  ignored  that’s why if the very first character of the string is not identified as numeric than the whole string would be ignored and the ultimate output would be NaN.</p></li>
+               <li> <p>If the whole string is non numeric in nature than again NaN  would be returned as an output  </p></li>
+              </ul>
+                <h4>Example 3</h4>
+                <p class="code">
+                  <code>var  string   = parseInt('4 2 0 ') // JS would ignore  any whitespace and anything superseding  that <br>
+                    console.log(string) // output: 4 
+                   
+                    </code>
+      
+                </p>
+                <ul>
+          <li> <p>'parseInt()' function ignores the empty whitespace and any  consecutive character after that </p></li> </ul>
+      
+           <h3>Other Things to Note</h3>
+           <ol>
+      
+            <li>
+               In cases where the string exceeds the limit of base  or it is smaller/larger than the default base limits  i.e. <strong>2 and 36</strong>  than  it will return NaN(Not a Number)  as an output 
+            </li>
+            <li>English alphabets represents numbers greater than 9 for Radices /Bases equal to or above or 10 </li>
+            <li>For heavy or large numbers ‘math.floor()’ function should be used instead of ‘parInt()’</li>
+          </ol>
+          <h3>Conclusion</h3>
+          <p>Functions like 'parseInt()' or 'parseFloat()' can  help in performing multiple tasks like   converting the numerical input by user (which is string by default) to an integer/value which may further help you to do certain calculations or even apply algorithms based on that e.g:- a web app which converts number of minutes into hours and  vice-versa based on user input.</p>
+              </section>
+            </article>
+        </main>
+        <footer class="footer">
+          <!-- NEVER USE HEADING TAGS IN FOOTER -->
+          <div class="footer-header">Connect To Me</div>
+          <ul class="list-non-bullet ul">
+            <li class="list-item-inline">
+              <a
+                class="logo_ld"
+                href="https://www.linkedin.com/in/shubhendu-sen-771830156/"
+                target="_"
+                ><img
+                  alt="linkedin"
+                  src="https://img.icons8.com/metro/26/000000/linkedin.png"
+              /></a>
+            </li>
+            <li class="list-item-inline">
+              <a class="logo_gh" href="https://github.com/Sen-442b" target="_">
+                <img
+                  alt="Github"
+                  src="https://img.icons8.com/windows/32/000000/github.png"
+              /></a>
+            </li>
+            <li class="list-item-inline">
+              <a
+                class="logo_twt"
+                href="https://twitter.com/sen_shubhendu"
+                target="_"
+              >
+                <img
+                  alt="Twitter"
+                  src="https://img.icons8.com/ios-filled/24/000000/twitter.png"
+              /></a>
+            </li>
+          </ul>
+        </footer>
+</body>
+</html>
+
